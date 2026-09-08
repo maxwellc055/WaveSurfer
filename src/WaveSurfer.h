@@ -27,7 +27,7 @@ class WaveSurfer
     static void on_ZC(); //Triggered on interrupt attached to zero crossing pulse from dimmer. Attempts to achieve requested power level.
     uint8_t power; //Percentage (%) of full-waves allowed to pass
     volatile float skip_rate; //Proportion (not %) of full-waves to be skipped
-    volatile uint8_t num_skipped = 0; //Number of full-waves skipped
+    volatile uint8_t num_skipped = 1; //Number of full-waves skipped
     volatile uint8_t num_fired = 0; //Number of full-waves let fire
     volatile bool curr_skipping = true; //True when the power is blocking power
     uint8_t ZC_pin;
